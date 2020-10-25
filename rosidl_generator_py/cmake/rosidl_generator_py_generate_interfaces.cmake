@@ -255,7 +255,7 @@ foreach(_typesupport_impl ${_typesupport_impls})
   target_link_libraries(
     ${_target_name}
     ${_target_name_lib}
-    ${PythonExtra_LIBRARIES}
+    ${PythonExtra_EXTENSION_LIBRARIES}
     ${rosidl_generate_interfaces_TARGET}__${_typesupport_impl}
   )
 
