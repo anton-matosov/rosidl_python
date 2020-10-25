@@ -183,7 +183,7 @@ add_dependencies(
 
 target_link_libraries(
   ${_target_name_lib}
-  ${PythonExtra_LIBRARIES}
+  ${PythonExtra_EXTENSION_LIBRARIES}
 )
 target_include_directories(${_target_name_lib}
   PUBLIC
