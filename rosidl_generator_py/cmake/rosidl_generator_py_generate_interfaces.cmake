@@ -183,13 +183,12 @@ add_dependencies(
 
 target_link_libraries(
   ${_target_name_lib}
-  ${PythonExtra_EXTENSION_LIBRARIES}
+  PythonExtra::Extension
 )
 target_include_directories(${_target_name_lib}
   PUBLIC
   ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_c
   ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_py
-  ${PythonExtra_INCLUDE_DIRS}
 )
 
 # Check if numpy is in the include path
@@ -255,7 +254,7 @@ foreach(_typesupport_impl ${_typesupport_impls})
   target_link_libraries(
     ${_target_name}
     ${_target_name_lib}
-    ${PythonExtra_EXTENSION_LIBRARIES}
+    PythonExtra::Extension
     ${rosidl_generate_interfaces_TARGET}__${_typesupport_impl}
   )
 
